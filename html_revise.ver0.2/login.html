@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!--TAB이름이 바뀜-->
+  <title>PJ_RealEstate</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!--TAB이미지 바꾸는 곳-->
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <!--보류-->
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- 구글 폰트사용-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <!-- 다양한 Device에 최적화된 CSS작업을 실행 가능하게 한다.-->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <!--LIB모음-->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: PJ_RealEstate
+    Theme URL: https://bootstrapmade.com/pj-real-estate/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <div class="click-closed"></div>
+  <!--/ Form Search Star /-->
+  <div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">매물 검색</h3>
+    </div>
+    <span class="close-box-collapse right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="Type">통합검색</label>
+              <!--회색 글씨 보여주는 기능 placeholder-->
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="통합검색">
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="Type">거래방식</label>
+              <select class="form-control form-control-lg form-control-a" id="거래방식">
+                <option>전체</option>
+                <option>매매</option>
+                <option>전세</option>
+                <option>월세</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="city">지역</label>
+              <select class="form-control form-control-lg form-control-a" id="city">
+                <option>전체</option>
+                <option>서울시</option>
+                <option>경기도</option>
+                <option>인천시</option>
+                <option>부산시</option>
+                <option>대전시</option>
+                <option>대구시</option>
+                <option>울산시</option>
+                <option>세종시</option>
+                <option>광주시</option>
+                <option>충청북도</option>
+                <option>충청남도</option>
+                <option>경상북도</option>
+                <option>경상남도</option>
+                <option>전라북도</option>
+                <option>전라남도</option>
+                <option>제주도</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bedrooms">방의 개수</label>
+              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+                <option>전체</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="garages">차고</label>
+              <select class="form-control form-control-lg form-control-a" id="garages">
+                <option>전체</option>
+                <option>있음</option>
+                <option>없음</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bathrooms">화장실 개수</label>
+              <select class="form-control form-control-lg form-control-a" id="bathrooms">
+                <option>전체</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="price">최저금액 설정</label>
+              <select class="form-control form-control-lg form-control-a" id="price">
+                <option>전체</option>
+                <option> 5천</option>
+                <option> 1억</option>
+                <option> 5억</option>
+                <option> 10억</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">매물 검색</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/ Form Search End /-->
+
+  <!--/ Nav Star /-->
+  <!--MainButton-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" href="index.html">PJ<span class="color-b">RealEstate</span></a>
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+      <!--MainButton-->
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">홈</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="Login.html"> </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              회사소개 </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="about.html">회사 소개</a>
+              <a class="dropdown-item" href="agent-single.html">대표 소개</a>
+              <a class="dropdown-item" href="agents-grid.html">직원 소개</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="blog-single.html">판매</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+
+          <li class="nav-item">
+            <!-- 구매와 관련된 정보만을 다룬다-->
+            <a class="nav-link" href="property-grid.html">구매</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+
+        
+          <li class="nav-item">
+            <a class="nav-link active" href="Login.html"> 로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signUp.html">회원가입</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
