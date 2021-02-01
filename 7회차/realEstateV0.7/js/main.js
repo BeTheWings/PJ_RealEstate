@@ -1,28 +1,28 @@
 (function ($) {
-  "use strict";
-  
-  // Preloader
-  $(window).on('load', function () {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
-        $(this).remove();
-      });
-    }
-  });
+	"use strict";
 
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-    return false;
-  });
-  
+	// Preloader
+	$(window).on('load', function () {
+		if ($('#preloader').length) {
+			$('#preloader').delay(100).fadeOut('slow', function () {
+				$(this).remove();
+			});
+		}
+	});
+
+	// Back to top  
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top').fadeIn('slow');
+		} else {
+			$('.back-to-top').fadeOut('slow');
+		}
+	});
+	$('.back-to-top').click(function () {
+		$('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+		return false;
+	});
+
 	var nav = $('nav');
 	var navHeight = nav.outerHeight();
 
@@ -103,7 +103,7 @@
 	/*--/ Property owl owl /--*/
 	$('#property-single-carousel').owlCarousel({
 		loop: true,
-		margin: 0,  
+		margin: 0,
 		nav: true,
 		navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
 		responsive: {
@@ -118,7 +118,7 @@
 		loop: true,
 		margin: 30,
 		responsive: {
-			0: {  
+			0: {
 				items: 1,
 			},
 			769: {
@@ -148,3 +148,18 @@
 	});
 
 })(jQuery);
+function setThumbnail(event) {
+	var reader = new FileReader(); reader.onload = function (event) { var img = document.createElement("img"); img.setAttribute("src", event.target.result); document.querySelector("div#image_container").appendChild(img); };
+	reader.readAsDataURL(event.target.files[0]);
+}
+
+function goPopup() {
+	var pop = window.open("jusoPopup.do.html",
+		"pop", "width=570,height=420, scrollbars=yes, resizable=yes");
+}
+function jusoCallBack(roadFullAddr, roadAddrPart1, addrDetail, roadAddrPart2, engAddr, jibunAddr, zipNo) {
+	document.getElementById("zipNo").value = zipNo; document.getElementById("addr").value = roadAddrPart1; if (addrDetail.length > 30) { alert('상세주소가 너무 길어 다시 입력해야 합니다.'); return; } document.getElementById("addrDetail").value = addrDetail;
+}
+
+
+

@@ -1697,6 +1697,11 @@ footer .credits {
   color: #ffffff;
   margin-left: 470px;
 }
+.btn.btn-access {
+  background-color: #000000;
+  color: #ffffff;
+
+}
 
 .btn.btn-ll {
   background-color: #000000;
