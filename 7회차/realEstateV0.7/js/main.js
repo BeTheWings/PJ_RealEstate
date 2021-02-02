@@ -157,9 +157,6 @@ function goPopup() {
 	var pop = window.open("jusoPopup.do.html",
 		"pop", "width=570,height=420, scrollbars=yes, resizable=yes");
 }
-function jusoCallBack(roadFullAddr, roadAddrPart1, addrDetail, roadAddrPart2, engAddr, jibunAddr, zipNo) {
-	document.getElementById("zipNo").value = zipNo; document.getElementById("addr").value = roadAddrPart1; if (addrDetail.length > 30) { alert('상세주소가 너무 길어 다시 입력해야 합니다.'); return; } document.getElementById("addrDetail").value = addrDetail;
-}
 
 
 
