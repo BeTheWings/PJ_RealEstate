@@ -221,126 +221,151 @@
   <!--/ Intro Single star /-->
   <section class="intro-single">
     <div class="container">
-      <div class="row"></div>
       <!--매매 매물을 등록하는 페이지-->
       <div class="title-single-box">
         <h1 class="title-single">매매 등록</h1>
       </div>
     </div>
-    </div>
-  </section>
-
-  <section class="news-singe nav-arrow-b">
     <div class="container">
-      <div class="row">
-        <form class="formForSell" action="main.js" method="post">
-          <table>
-            <tr>
-              <td>판매자 성함 :</td>
-              <td><input type="text" id="Name" size="2"></td>
-            </tr>
-            <tr>
-              <div class="form-group">
-                <label for="type">
-                  <td>거래방식: </td>
-                </label>
-                <td><select id="type" style="width:64px;">
-                    <option>매매</option>
-                    <option>전세</option>
-                    <option>월세</option>
-                    <option>격리</option>
-                  </select> </td>
-              </div>
-            </tr>
-            <tr>
-              <td>우편 번호 :
-              </td>
-              <td><input type="text" class="zip_code" id="zipNo" readonly> <button type="button" class="btn btn-access"
-                  class="zip_code_btn" onclick="goPopup();">우편번호</button></td>
-            </tr>
+      <form class="form-a" name="formForName" action="index.html">
+        <div class="row">
+          <div class="col-md-5 mb-2">
+            <table>
+              <tr>
+                <td>판매자 성함 :</td>
+                <td><input type="text" name="inputName" class="form-control form-control-lg form-control-a form-pwd"
+                    size="2">
+                </td>
+              </tr>
+              <tr>
+                <div class="form-group">
+                  <label for="type">
+                    <td>거래방식: </td>
+                  </label>
+                  <td><select name="type" style="width:100px;"
+                      class="form-control form-control-lg form-control-a form-b">
+                      <option value="X">선택</option>
+                      <option>매매</option>
+                      <option>전세</option>
+                      <option>월세</option>
+                    </select> </td>
+                </div>
+              </tr>
+              <tr>
+                <td>우편 번호 :
+                </td>
+                <td><input type="text"class="zip_code form-control form-control-lg form-control-a form-pwd"
+                    name="zipNo">
+                </td>
+                <td>
+                  <button type="button" class="btn btn-access" class="zip_code_btn" onclick="goPopup();">우편번호</button>
+                </td>
+              </tr>
+              <tr>
+                <td>기본 주소 : </td>
+                <td><input type="text" class="form-control form-control-lg form-control-a form-b"
+                    placeholder="기본 주소를 입력해 주세요." name="addr"></td>
+              </tr>
 
-            <tr>
-              <td>기본 주소 : </td>
-              <td><input type="text" placeholder="기본 주소를 입력해 주세요" id="addr"></td>
-            </tr>
+              <tr>
+                <td>나머지 주소: </td>
+                <td><input type="text" class="form-control form-control-lg form-control-a form-b"
+                    placeholder="나머지 주소를 입력해 주세요." name="addrDetail"></td>
+              </tr>
+              <tr>
+                <td>평수: </td>
+                <td><input type="text" class="form-control form-control-lg form-control-a form-phone" size="2"
+                    name="roomSize"></td>
+              </tr>
+              <tr>
+                <td>방의 개수: </td>
+                <td><input type="text" class="form-control form-control-lg form-control-a form-phone" size="2"
+                    name="roomCount"></td>
+              </tr>
 
-            <tr>
-              <td>나머지 주소: </td>
-              <td><input type="text" placeholder="나머지 주소를 입력해 주세요" id="addrDetail"></td>
-            </tr>
-            <tr>
-              <td>평수: </td>
-              <td><input type="text" size="2" id="roomSize"></td>
-            </tr>
-            <tr>
-              <td>방의 개수: </td>
-              <td><input type="text" size="2" id="roomCount"></td>
-            </tr>
+              <tr>
+                <td>화장실 개수: </td>
+                <td><input type="text" class="form-control form-control-lg form-control-a form-phone" size="2"
+                    name="bathCount"></td>
+              </tr>
 
-            <tr>
-              <td>화장실 개수: </td>
-              <td><input type="text" size="2" id="bathCount"></td>
-            </tr>
+              <tr>
+                <div class="form-group">
+                  <label for="garages">
+                    <td>창고 여부: </td>
+                  </label>
+                  <td><select name="garages" style="width:100px;"
+                      class="form-control form-control-lg form-control-a form-pwd">
+                      <option value="X">선택</option>
+                      <option>있음</option>
+                      <option>없음</option>
+                    </select> </td>
+                </div>
+              </tr>
 
-            <tr>
-              <div class="form-group">
-                <label for="garages">
-                  <td>창고 여부: </td>
-                </label>
-                <td><select id="garages" style="width:64px;">
-                    <option>있음</option>
-                    <option>없음</option>
-                  </select> </td>
-              </div>
-            </tr>
+              <tr>
+                <div class="form-group">
+                  <label for="carPlace">
+                    <td>주차장 여부: </td>
+                  </label>
+                  <td><select name="carPlace" style="width:100px;"
+                      class="form-control form-control-lg form-control-a form-pwd">
+                      <option value="X">선택</option>
+                      <option>있음</option>
+                      <option>없음</option>
+                    </select> </td>
+                </div>
+              </tr>
 
-            <tr>
-              <div class="form-group">
-                <label for="carPlace">
-                  <td>주차장 여부: </td>
-                </label>
-                <td><select id="carPlace" style="width:64px;">
-                    <option>있음</option>
-                    <option>없음</option>
-                  </select> </td>
-              </div>
-            </tr>
+              <tr>
+                <td style="vertical-align:top">기본 옵션 : </td>
+                <td> <textarea name="content" cols="50" rows="3"
+                    class="form-control form-control-lg form-control-a"></textarea></td>
+              </tr>
 
-            <tr>
-              <td style="vertical-align:top">기본 옵션 : </td>
-              <td> <textarea id="content" cols="50" rows="3"></textarea></td>
-            </tr>
+              <tr>
+                <td>관리비 : </td>
+                <td><input type="text" name="adminExpense" size="2"
+                    class="form-control form-control-lg form-control-a form-pwd"></td>
+              </tr>
 
-            <tr>
-              <td>관리비 : </td>
-              <td><input type="text" id="adminExpense" size="2"></td>
-            </tr>
+              <tr>
+                <td>가격 : </td>
+                <td><input type="text" name="price" size="2"
+                    class="form-control form-control-lg form-control-a form-pwd">
+                </td>
+              </tr>
 
-            <tr>
-              <td>가격 : </td>
-              <td><input type="text" id="price" size="2"></td>
-            </tr>
+              <tr>
+                <td>전문가 예상 견적 : </td>
+                <td><input type="text" name="priceExpert" class="form-control form-control-lg form-control-a form-pwd"
+                    size="2">
+                </td>
+                <td>
+                  <button type="button" class="btn btn-access">조회</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="file" name="image" accept="image/*" onchange="setThumbnail(event);"></td>
+                <td>
+                  <div name="image_container"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-access" onclick="formForSale()">확인</button>
+                    <button type="button" class="btn btn-access" onclick="location.href='tread_sell.html'">취소</button>
+                  </div>
+                </td>
+              </tr>
+            </table>
 
-            <tr>
-              <td>전문가 예상 견적 : </td>
-              <td><input type="text" id="priceExpert" size="2"> <button type="button" class="btn btn-access">조회</button>
-              </td>
-            </tr>
-            <tr>
-              <td><input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"></td>
-              <td>
-                <div id="image_container"></div>
-              </td>
-            </tr>
-          </table>
-          <div class="text-center"><button type="button" class="btn btn-access"
-              onclick="location.href='index.html'">확인</button> <button type="button" class="btn btn-access"
-              onclick="location.href='index.html'"> 취소</button></div>
-
-          <!-- 버튼 색깔 왜 안바뀜?-->
-          <!-- 우편번호 눌렀을때 안가지는 오류 해결하기-->
-        </form>
-      </div>
+            <!-- 버튼 색깔 왜 안바뀜?-->
+            <!-- 우편번호 눌렀을때 안가지는 오류 해결하기-->
+      </form>
+    </div>
+    </div>
     </div>
     </div>
   </section>

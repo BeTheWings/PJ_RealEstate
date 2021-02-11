@@ -330,19 +330,182 @@ function isEmpty_signUp() {
 
 
 function formForSale() {
-	var name = document.getElementById("name").value;
-	var type = document.getElementById("type").value;
-	var zipNo = document.getElementById("zipNo").value;
-	var addr = document.getElementById("addr").value;
-	var addrDetail = document.getElementById("addrDetail").value;
-	var roomSize = document.getElementById("roomSize").value;
-	var roomCount = document.getElementById("roomCount").value;
-	var bathCount = document.getElementById("bathCount").value;
-	var garages = document.getElementById("garages").value;
-	var carPlace = document.getElementById("carPlace").value;
-	var adminExpense = document.getElementById("adminExpense").value;
-	var price = document.getElementById("price").value;
-	var priceExpert = document.getElementById("priceExpert").value;
-	var image = document.getElementById("image");
-console.log(type)
+
+	var namecheck = /^[가-힣\s]+$/;
+	var addrDetailcheck = /^[가-힣\s]+$/ + /[0-9]/;
+	var roomSizecheck = /[0-9]{3}/;
+	var roomCountcheck = /[0-9]{3}/;
+	var adminExpensecheck = /^[가-힣\s]+$/ + /[0-9]/;
+	var pricecheck = /^[가-힣\s]+$/ + /[0-9]/;
+
+	if (!document.formForName.inputName.value) {
+		alert('이름을 입력해주십시오.');
+		document.formForName.inputName.focus();
+		return;
+	} else if (!namecheck.test(document.formForName.inputName.value)) {
+		alert('이름을 다시 확인해주십시오. (이름은 한글만 사용가능. 특수기호, 공백 사용 불가. 최소 2자 이상 입력.)');
+		document.formForName.inputName.focus();
+		return;
+	}
+	else if (!document.formForName.type.value == "X") {
+		alert('거래방식을 선택해주세요.');
+		document.formForName.type.focus();
+		return;
+	} else if (!document.formForName.zipNo.value) {
+		alert('우편 번호를 입력해주십시오.');
+		document.formForName.zipNo.focus();
+		return;
+	} else if (!document.formForName.addr.value) {
+		alert('기본 주소를 입력해주십시오.');
+		document.formForName.addr.focus();
+		return;
+	} else if (!document.formForName.addrDetail.value) {
+		alert('나머지 주소를 입력해주십시오.');
+		document.formForName.addr.focus();
+		return;
+	} else if (!addrDetailcheck.test(document.formForName.addrDetail.value)) {
+		alert('나머지 주소를 다시 확인해주십시오. (나머지 주소는 한글만 사용가능. 특수기호, 공백 사용 불가. 최소 2자 이상 입력.)');
+		document.formForName.addrDetail.focus();
+		return;
+	} else if (!document.formForName.roomSize.value) {
+		alert('평수를 입력해주십시오.');
+		document.formForName.roomSize.focus();
+		return;
+	} else if (!roomSizecheck.test(document.formForName.roomsize.value)) {
+		alert('평수를 다시 확인해 주십시오.(평수는 숫자와 한글만 사용가능. 특수기호, 공백 사용 불가. 최소 2자 이상 입력.)')
+		document.formForName.roomsize.focus();
+		return;
+	} else if (!document.formForName.roomSize.value) {
+		alert('방의 개수를 입력해주십시오.');
+		document.formForName.roomCount.focus();
+		return;
+	} else if (!roomCountcheck.test(document.formForName.roomCount.value)) {
+		alert('방의 개수를 다시 확인해 주십시오.(방의 개수는 숫자와 한글만 사용가능. 특수기호, 공백 사용 불가. 최소 2자 이상 입력.)')
+		document.formForName.roomCount.focus;
+		return;
+	} else if (!document.formForName.garages.value) {
+		alert('창고 여부를 선택해주십시오.');
+		document.formForName.garages.focus();
+		return;
+	} else if (!document.formForName.carPlace.value) {
+		alert('주차장 여부를 선택해주십시오.');
+		document.formForName.carPlace.focus();
+		return;
+	} else if (!document.formForName.content.value) {
+		alert('기본옵션을 입력해주십시오.');
+		document.formForName.content.focus();
+		return;
+	} else if (!document.formForName.adminExpense.value) {
+		alert('관리비를 입력해주십시오.');
+		document.formForName.adminExpense.focus();
+		return;
+	} else if (!adminExpensecheck.test(document.formForName.adminExpense.value)) {
+		alert('관리비를 다시 확인해 주십시오.(관리비는 숫자와 한글만 사용가능. 특수기호, 공백 사용 불가. 최소 2자 이상 입력.)')
+		document.formForName.adminExpense.focus;
+		return;
+	} else if (!document.formForName.price.value) {
+		alert('가격을 입력해주십시오.');
+		document.formForName.price.focus();
+		return;
+	} else if (!pricecheck.test(document.formForName.price.value)) {
+		alert('가격을 다시 확인해 주십시오.(가격은 숫자와 한글만 사용가능. 특수기호, 공백 사용 불가. 최소 2자 이상 입력.)')
+		document.formForName.price.focus;
+		return;
+
+	} else if (!document.formForName.priceExpert.value) {
+		alert('전문가 가격을 조회해주십시오.');
+		document.formForName.priceExpert.focus();
+		return;
+	}
+	else {
+		document.formForName.submit();
+		return true;
+	}
+}
+
+var element_wrap = document.getElementById('wrap');
+
+function foldDaumPostcode() {
+
+	// iframe을 넣은 element를 안보이게 한다.
+	element_wrap.style.display = 'none';
+}
+
+function formForAddress() {
+	//jusopop.html ->tread_sell.html
+	var postcode = document.getElementById('sample3_postcode').value;
+	var address = document.getElementById('sample3_address').value;
+	var detailAddress = document.getElementById('sample3_detailAddress').value;
+	var extraAddress = document.getElementById('sample3_extraAddress').value;
+
+	document.formForJuso.action="index.html";
+	document.formForJuso.submit();
+	window.open("about:blank","_self").close();
+
+}
+
+function sample3_execDaumPostcode() {
+	// 현재 scroll 위치를 저장해놓는다.
+	var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+	new daum.Postcode({
+		oncomplete: function (data) {
+			// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+			// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+			// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+			var addr = ''; // 주소 변수
+			var extraAddr = ''; // 참고항목 변수
+
+			//사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+			if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+				addr = data.roadAddress;
+			} else { // 사용자가 지번 주소를 선택했을 경우(J)
+				addr = data.jibunAddress;
+			}
+
+			// 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+			if (data.userSelectedType === 'R') {
+				// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+				// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+				if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+					extraAddr += data.bname;
+				}
+				// 건물명이 있고, 공동주택일 경우 추가한다.
+				if (data.buildingName !== '' && data.apartment === 'Y') {
+					extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+				}
+				// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+				if (extraAddr !== '') {
+					extraAddr = ' (' + extraAddr + ')';
+				}
+				// 조합된 참고항목을 해당 필드에 넣는다.
+				document.getElementById("sample3_extraAddress").value = extraAddr;
+
+			} else {
+				document.getElementById("sample3_extraAddress").value = '';
+			}
+
+			// 우편번호와 주소 정보를 해당 필드에 넣는다.
+			document.getElementById('sample3_postcode').value = data.zonecode;
+			document.getElementById("sample3_address").value = addr;
+			// 커서를 상세주소 필드로 이동한다.
+			document.getElementById("sample3_detailAddress").focus();
+
+			// iframe을 넣은 element를 안보이게 한다.
+			// (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+			element_wrap.style.display = 'none';
+
+			// 우편번호 찾기 화면이 보이기 이전으로 scroll 위치를 되돌린다.
+			document.body.scrollTop = currentScroll;
+		},
+		// 우편번호 찾기 화면 크기가 조정되었을때 실행할 코드를 작성하는 부분. iframe을 넣은 element의 높이값을 조정한다.
+		onresize: function (size) {
+			element_wrap.style.height = size.height + 'px';
+		},
+		width: '100%',
+		height: '100%'
+	}).embed(element_wrap);
+
+	// iframe을 넣은 element를 보이게 한다.
+	element_wrap.style.display = 'block';
 }
