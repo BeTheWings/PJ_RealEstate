@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PJ_RealEstate_Sell</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <!--JSP File-->
+  <link href="lib/JSP/jspFile.jsp" rel="jspSheet">
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <form name="formForJuso"> 
+    <input type="text" id="sample3_postcode" placeholder="우편번호">
+    <input type="button" onclick="sample3_execDaumPostcode()" class="btn btn-access" value="우편번호 찾기"><br>
+    <input type="text" id="sample3_address" placeholder="주소"><br>
+    <input type="text" id="sample3_detailAddress" placeholder="상세주소">
+    <input type="text" id="sample3_extraAddress" placeholder="참고항목">
+    <br><br>
+    <button type="submit" class="btn btn-access" onclick="formForAddress()">확인</button>
+    <button type="reset" class="btn btn-access">취소</button>
+  </form>
+
+  <div id="wrap" style="display:none;border:1px solid;width:500px;height:400px;margin:5px 0;position:relative">
+    <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap"
+      style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
+  </div>
+
+</body>
+
+</html>
